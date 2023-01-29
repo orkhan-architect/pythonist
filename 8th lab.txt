@@ -1,0 +1,20 @@
+text = "hello, my dear friend. my name is elvin." \
+       "how are you ? " \
+       "i am 19 years old." \
+       "i am an programming engineer !" \
+       "see you later"
+
+characters = [".", "!", "?"]
+indexes = list()
+
+for i in range(len(text)):
+    for j in range(len(characters)):
+        if text[i] == characters[j]:
+            count = i
+            while True:
+                if text[count + 1].isalpha():
+                    indexes.append(count + 1)
+                    break
+                else:
+                    count = count + 1
+
